@@ -1,0 +1,132 @@
+<!doctype html>
+<html onclick="bbscriptOnClick()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACE66</title>
+    <link rel="icon" type="assets/ico" href="assets/favicon.ico" />
+    <link href="./assets/animation.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./assets/Futura-Medium.otf" rel="stylesheet" />
+    <!-- Atlas lander tracking script — place at top of <head>. -->
+    <!-- Atlas lander tracking script — place at top of <head>. -->
+    <meta
+      http-equiv="delegate-ch"
+      content="sec-ch-ua https://trk.rusticcrumbcafe.com; sec-ch-ua-mobile https://trk.rusticcrumbcafe.com; sec-ch-ua-arch https://trk.rusticcrumbcafe.com; sec-ch-ua-model https://trk.rusticcrumbcafe.com; sec-ch-ua-platform https://trk.rusticcrumbcafe.com; sec-ch-ua-platform-version https://trk.rusticcrumbcafe.com; sec-ch-ua-bitness https://trk.rusticcrumbcafe.com; sec-ch-ua-full-version-list https://trk.rusticcrumbcafe.com; sec-ch-ua-full-version https://trk.rusticcrumbcafe.com"
+    />
+    <style>
+      .dtpcnt {
+        opacity: 0;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var u = new URL(location.href);
+          var cpid =
+            u.searchParams.get("cpid") ||
+            "4e1b95e1-7fab-48f8-a60b-769388d4cea9";
+          var lpid =
+            u.searchParams.get("apid") ||
+            u.searchParams.get("lpid") ||
+            "5b23140d-517f-4073-befe-5e685ee409a7";
+          var lid = u.searchParams.get("lid") || "";
+          if (!cpid) {
+            return;
+          }
+          var s = document.createElement("script");
+          s.defer = 1;
+          s.src =
+            "https://trk.rusticcrumbcafe.com/d/.js?cpid=" +
+            encodeURIComponent(cpid) +
+            (lpid ? "&lpid=" + encodeURIComponent(lpid) : "") +
+            (lid ? "&lid=" + encodeURIComponent(lid) : "") +
+            "&lpurl=" +
+            encodeURIComponent(location.href) +
+            "&lpt=" +
+            encodeURIComponent(document.title || "") +
+            "&lpref=" +
+            encodeURIComponent(document.referrer || "") +
+            "&vtm=" +
+            Date.now();
+          document.head.appendChild(s);
+        } catch (e) {}
+      })();
+    </script>
+    <noscript
+      ><link
+        href="https://trk.rusticcrumbcafe.com/d/.js?noscript=true&lpurl="
+        rel="stylesheet"
+    /></noscript>
+
+    <style>
+      @font-face {
+        font-family: "Futura-Medium";
+        src: url("./assets/Futura-Medium.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Futura-Bold";
+        src: url("./assets/Futura-Bold.otf") format("opentype");
+      }
+      body {
+        font-family: "Futura-Bold";
+        font-weight: 500;
+      }
+    </style>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .x-center {
+          @apply left-1/2 translate-x-[-50%];
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex flex-col justify-center items-center">
+      <div class="relative w-full h-screen overflow-hidden">
+        <!-- Background Image -->
+        <img
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 max-[1024px]:relative max-[1024px]:h-[100vh]"
+          src="assets/bg1.png"
+          alt="Background"
+        />
+
+        <!-- Text Image -->
+        <div class="absolute top-[16%] w-full max-[1024px]:top-[2%]">
+          <div class="relative">
+            <img
+              src="assets/text-img.png"
+              alt="Frame Text"
+              class="absolute z-30 w-[72vh] max-[1024px]:w-[45vh] left-1/2 -translate-x-1/2 min-[1025px]:translate-x-[-105%] min-[1025px]:translate-y-[-5%]"
+            />
+          </div>
+        </div>
+
+        <!-- Button -->
+        <a
+          href="https://trk.rusticcrumbcafe.com/click"
+          class="absolute top-[50%] max-[1024px]:top-[30%] w-[70vh] max-[1024px]:w-[48vh] left-1/2 -translate-x-1/2 min-[1025px]:translate-x-[-106%] min-[1025px]:top-[60%] z-10"
+        >
+          <img src="assets/btn2.png" alt="Top button" />
+        </a>
+
+        <!-- Footer Button -->
+        <a
+          href="https://trk.rusticcrumbcafe.com/click"
+          class="absolute top-[46%] max-[1024px]:w-[43vh] min-[1025px]:bottom-10 min-[1025px]:top-auto min-[1025px]:w-[70vh] left-1/2 -translate-x-1/2 min-[1025px]:translate-x-[-110%] z-10"
+        >
+          <img src="assets/footer.png" alt="Footer button" />
+        </a>
+
+        <!-- Cover Image -->
+        <img
+          src="assets/cover-img.png"
+          alt="Bottom image"
+          class="absolute bottom-0 w-[50vh] max-[1024px]:w-[53vh] left-1/2 -translate-x-1/2 min-[1025px]:w-[75vh] min-[1025px]:translate-x-[0%] z-20"
+        />
+      </div>
+    </div>
+  </body>
+</html>
